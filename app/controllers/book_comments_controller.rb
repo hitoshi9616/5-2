@@ -7,7 +7,7 @@ class BookCommentsController < ApplicationController
     comment.save
     @book_comment = BookComment.new
   end
-
+  
   def destroy
     @book = Book.find(params[:book_id])
     @comment = BookComment.find_by(id: params[:id],book_id: params[:book_id])
